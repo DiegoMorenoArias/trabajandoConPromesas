@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PawShow</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="section has-background-warning-light">
+        <h1 class="title has-text-warning" id="titulito">PawShow</h1>
+
+        <div class="fixed-grid has-8-cols">
+            <form class="grid" id="searchForm">
+                <input class="input cell is-col-span-6 cent is-warning tuki" type="text" placeholder="Encontrá la perfección"
+                    id="Text" />
+                <input class="button cell is-primary has-background-warning" type="button" id="Buscar" value="Buscar" />
+            </form>
+
+            <button class="button is-primary has-background-warning" id="openModal">Agregar mascota</button>
+
+            <div id="drop-zone" class="drop-zone">
+                <h1 id="mensaje">Arrastra aquí a tu mascota favorita!</h1>
+            </div>
+
+
+            <div class="grid">
+                <div class="field has-2-cols" >
+                    <div class="control">
+                        <div class="select is-info">
+                            <select id="sort-dropdown" id="tuki"> <!--Por alguna razón no cambia el color, me rindo-->
+                                <option value="price-default">Edad: no ordenar</option>
+                                <option value="price-asc">Edad: Menor a Mayor</option>
+                                <option value="price-desc">Edad: Mayor a Menor</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal agregar mascota -->
+        <div class="modal " id="productModal">
+            <div class="modal-background "></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-warning-light">
+                    <p class="modal-card-title new">Nueva mascota</p>
+                    <button class="delete" aria-label="close" id="closeModal"></button>
+                </header>
+                <section class="modal-card-body has-background-warning-light">
+                    <!-- Formulario para el nuevo producto -->
+                    <form id="productForm">
+                        <div class="field ">
+                            <label class="label new">Título de la tarea</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Ingresa el nombre de la tarea" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label new">Descripción</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Ingresa una descripción"
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label new">Asignado a</label>
+                            <div class="control">
+                                    <input class="input" type="text"id = "asignadoInput" placeholder="Ingresa a quién se lo asignas"
+                                    required>
+                            </div>
+                        </div>
+
+                    </form>
+                </section>
+
+                <footer class="modal-card-foot has-background-warning-light">
+                    <button class="button is-success has-background-warning" id="saveProduct">Guardar</button>
+                    <button class="button" id="cancelModal">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Modal de detalles del animal-->
+        <div class="modal " id="infoModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head has-background-warning-light">
+                    <p class="modal-card-title" id="infoModalTitle">Detalles de la mascota</p>
+                    <button class="delete" aria-label="close" id="closeInfoModal"></button>
+                </header>
+                <section class="modal-card-body has-background-warning-light" id="infoModalContent">
+                    <!-- Aquí se mostrará la información de la mascota -->
+                </section>
+            </div>
+        </div>
+
+        <div class="fixed-grid has-4-cols ">
+            <div class="grid " id="content"></div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

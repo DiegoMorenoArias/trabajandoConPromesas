@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Bulma</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <!-- Campo de búsqueda -->
+            <h1 class="title">Mercado Bulma</h1>
+          <div class="fixed-grid has-8-cols">
+            <form class="grid" id="searchForm">
+              <input class="input cell is-col-span-7 cent" type="text" placeholder="Text input" id="Text" />
+              <input class="button cell" type="button" id="Buscar" value="Button" />
+            </form>
+          </div>
+
+            <!-- Dropdown de categorías -->
+            <div class="field">
+                <div class="control">
+                    <div class="select">
+                        <select id="category-dropdown">
+                            <option value="all">Todas las Categorías</option>
+                            <option value="perro">Perros</option>
+                            <option value="gato">Gatos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown de orden -->
+            <div class="field">
+                <div class="control">
+                    <div class="select">
+                        <select id="sort-dropdown">
+                            <option value="default">Ordenar por</option>
+                            <option value="price-asc">Precio: Menor a Mayor</option>
+                            <option value="price-desc">Precio: Mayor a Menor</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor para los resultados de la búsqueda -->
+            <div id="animal-list" class="columns is-multiline">
+                <!-- Aquí se insertarán las tarjetas de los animales -->
+            </div>
+
+            <!-- Mensaje de "No se encontraron resultados" -->
+            <div id="no-results" class="notification is-danger is-hidden">
+                No se encontraron resultados.
+            </div>
+        </div>
+      
+       <div class="fixed-grid has-4-cols">
+        <!-- First and unique grid bro -->
+         <!-- Aqui dentro no se requiere nada más-->
+           <div class="grid" id="content">
+
+            </div>
+           </div>
+           <!-- Contenedor para los resultados de la búsqueda -->
+           <div id="animal-list" class="columns is-multiline">
+            <!-- Aquí se insertarán las tarjetas de los animales -->
+          </div>
+
+        <!-- Mensaje de "No se encontraron resultados" -->
+          <div id="no-results" class="notification is-danger is-hidden">
+            No se encontraron resultados.
+          </div>
+        </div>
+    </section>
+    </body>
+  </html>
+
+

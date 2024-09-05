@@ -1,0 +1,146 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Colores personalizados */
+:root {
+  --card-background-color: #de0ec2;
+  --title-color: #e7d9d9;
+  --primary-color: #fffff;
+}
+
+/* Estilo del título */
+.title {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+#titulito {
+  color: var(--title-color);
+  text-shadow: rgb(109, 109, 109) 1px 0 10px;
+}
+
+/* Estilo del input de búsqueda */
+#search-input {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search-input:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de las tarjetas */
+.card {
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  /* Aumenta el tamaño de la tarjeta */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  /* Asegura que la tarjeta se superponga a otras cuando crezca */
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/* Estilo de las imágenes en las tarjetas */
+.card-image img {
+  border-radius: 0.5rem;
+}
+
+/* Estilo del precio */
+.subtitle.is-6 {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Estilo del mensaje de no resultados */
+.notification.is-danger {
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los dropdowns */
+.select select {
+  border: 2px solid var(--primary-color);
+}
+
+.select select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fixed {
+  object-fit: cover;
+}
+
+.custom-card {
+  border: 3px solid hsl(48, 100%, 67%);
+  /* Color de borde pastel amarillo */
+  border-radius: 15px;
+  /* Opcional: borde redondeado */
+}
+
+
+.drop-zone {
+  border: 2px dashed #cccccc;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  background-color: rgb(34, 33, 33); /* Fondito */
+}
+
+#mensaje {
+  color: hsl(48, 100%, 67%); /* Cambia este color según tus preferencias */
+  margin: 0; /* Eliminar márgenes */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.new
+{
+  color: black;
+}
+
+#infoModalContent {
+  color: black;
+}
+
+#infoModal .modal-card-title {
+  color: black;
+}
+
+#infoModalContent strong {
+  color: black;
+}
+
+#infoModalContent img {
+  border-radius: 7px;
+}
+
+
+
+#tuki
+{
+  background-color: rgb(34, 33, 33) !important;
+}
